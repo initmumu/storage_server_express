@@ -1,0 +1,37 @@
+{
+  "name": "storage_server_express",
+  "version": "1.0.0",
+  "description": "Mumu BOX!",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.boot.js --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/initmumu/storage_server_express.git"
+  },
+  "author": "initmumu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/initmumu/storage_server_express/issues"
+  },
+  "homepage": "https://github.com/initmumu/storage_server_express#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.2"
+  }
+}
