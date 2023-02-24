@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Tilt+Warp&display=swap');
+.nav{
+    /* //* 드래그 방지 속성 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+    justify-content:space-between;
+
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    border-bottom: 1px rgb(218, 218, 218) solid;
+    background-color: rgba(255,255,255,1);
+}
+
+.nav>.logo{
+    display: flex;
+    margin: 0 0 0 20;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav>.logo>.img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+.nav>.logo>.txt{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 15px;
+    -webkit-transform: rotate(0.2deg);
+    -moz-transform: rotate(0.2deg);
+}
+
+.nav>.menu{
+    display: flex;
+
+    justify-content: end;
+    width: 50vw;
+}
+
+.nav_margin{
+    margin-top: 65px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+
+    padding: 8px;
+}
+
+.vertical{
+    flex-direction: column;
+}
+

@@ -4,6 +4,7 @@ import { PORT } from "../../config/server"
 
 //? 라이브러리
 import express from "express" //? Express.js 프레임워크
+import path from 'path'
 import chalk from "chalk" //? 콘솔에 찍히는 글자를 이쁘게
 
 //? Controller
@@ -22,8 +23,21 @@ class Server {
     }
 
     setMiddleware(){
+        //* static 폴더 설정
+        this.app.use(express.static(path.join(__dirname, 'public')));
+        
+        //* Pug 템플릿 관련 설정
+        this.app.set('views', path.join(__dirname,'/views'))
+        this.app.set('view engine', 'pug')
+        this.app.engine('pug', require('pug').__express)
+
+        //* req.body 받는 설정
         this.app.use(express.json())
+
+        //* Controller
         this.setRoute()
+
+        //* 잘못된 요청 처리 라우터
         this.app.use((req, res) => {
             res.json({
                 status: 404,

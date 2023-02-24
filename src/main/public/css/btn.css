@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&family=Tilt+Warp&display=swap');
+
+.btn_gr{
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: rgb(155, 204, 124);
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 5 10 5 10;
+    margin: 5 20 5 5;
+    cursor: pointer;
+}
+
+.btn_gr:hover{
+    background-color: rgb(142, 187, 114);
+}
+
+.btn_tp{
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 5 10 5 10;
+    margin: 5 5 5 5;
+    cursor: pointer;
+}

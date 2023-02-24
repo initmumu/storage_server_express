@@ -1,0 +1,14 @@
+.input_form{
+    width: 400px;
+    height: 40px;
+    padding: 0 10 0 10;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.input_form:focus{
+    border: 2px solid rgb(155, 204, 124);
+    border-radius: 4px;
+    outline: none;
+}

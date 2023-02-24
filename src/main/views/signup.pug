@@ -1,0 +1,17 @@
+extends \layout\layout.pug
+        
+block content 
+    head
+        link(rel="stylesheet", href="/css/form.css")
+    .nav_margin
+        .content
+            .vertical.content
+                form(class = "vertical content" action="/signup", method="POST")
+                    input(class = "input_form" placeholder = "아이디")
+                    input(class = "input_form" placeholder = "비밀번호")
+                    input(class = "input_form" placeholder = "비밀번호 확인")
+                    input(class = "input_form" placeholder = "이름")
+                    input(class = "input_form" placeholder = "이메일")
+
+
+

@@ -1,0 +1,24 @@
+// layout.pug
+html
+  head
+    title WingBox
+    link(rel="stylesheet" type="text/css" href="/css/layout.css")
+    link(rel="stylesheet" type="text/css" href="/css/btn.css")
+    link(rel="stylesheet" type="text/css" href="/css/font.css")
+    link(rel="icon" href="/asset/logo.png")
+  body(style = "margin: 0")
+    block nav 
+      div(class="nav")
+        div(class="logo" id = "btn_logo")
+          img(class ="img" src="/asset/logo.png")
+          span(class="txt") WINGBOX
+        
+        div(class = "menu" id = "nav_menu")
+          div(class="btn_tp" id = "btn_signin") 로그인
+          div(class="btn_gr" id = "btn_signup") 회원 가입
+    block content
+    block footer
+      - var year = new Date().getFullYear();
+      .footer 지금은 #{year}년 이다.
+
+script(type = "text/javascript" src="/js/nav.js")
