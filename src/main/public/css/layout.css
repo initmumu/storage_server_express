@@ -50,10 +50,13 @@
     margin-top: 65px;
 }
 
+.flex_box{
+    display: flex;
+}
+
 .content{
     display: flex;
     justify-content: center;
-
     padding: 8px;
 }
 

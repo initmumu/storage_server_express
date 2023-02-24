@@ -7,11 +7,28 @@ block content
         .content
             .vertical.content
                 form(class = "vertical content" action="/signup", method="POST")
-                    input(class = "input_form" placeholder = "아이디")
-                    input(class = "input_form" placeholder = "비밀번호")
-                    input(class = "input_form" placeholder = "비밀번호 확인")
-                    input(class = "input_form" placeholder = "이름")
-                    input(class = "input_form" placeholder = "이메일")
+                    .vertical.content
+                        input(class = "input_form" placeholder = "아이디" id = "id_input")
+                        .status_msg_box.vertical.flex_box
+                            span(class = "err" id = "id_err")
+                    .vertical.content
+                        input(class = "input_form" placeholder = "비밀번호")
+                        .status_msg_box.vertical.flex_box
+                            span(class = "err" id = "pw_err")
+                    .vertical.content
+                        input(class = "input_form" placeholder = "비밀번호 확인")
+                        .status_msg_box.vertical.flex_box
+                            span(class = "err" id = "pw_err")
+                    .vertical.content
+                        input(class = "input_form" placeholder = "이름")
+                        .status_msg_box.vertical.flex_box
+                            span(class = "err" id = "name_err")
+                    .vertical.content
+                        input(class = "input_form" placeholder = "이메일")
+                        .status_msg_box.vertical.flex_box
+                            span(class = "err" id = "email_err")
+
+    script(src = "/js/signup.js")
 
 
 
