@@ -13,6 +13,8 @@
     cursor: pointer;
 }
 
+
+
 .btn_gr:hover{
     background-color: rgb(142, 187, 114);
 }
@@ -27,4 +29,8 @@
     padding: 5 10 5 10;
     margin: 5 5 5 5;
     cursor: pointer;
+}
+
+.btn_tp:hover{
+    text-decoration: underline;
 }

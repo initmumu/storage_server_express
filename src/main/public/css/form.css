@@ -14,7 +14,7 @@
 }
 
 .status_msg_box{
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .err{
@@ -27,4 +27,19 @@
     color:rgb(142, 212, 43);
     font-weight: bold;
     font-size: 15px;
+}
+
+.submit{
+    height: 40px;
+    width: 400px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(155, 204, 124);
+    border: none;
+    margin: 8 8 0 8 ;    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: rgb(142, 187, 114);
+
 }
