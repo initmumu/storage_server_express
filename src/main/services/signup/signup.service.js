@@ -8,18 +8,12 @@ export const signUpPage = (req, res) => {
 export const IDValidation = async (req, res) => {
     const conn = maria_conn()
     const body = req.body
-    const sql_query = "SELECT user_id FROM user"
+    const sql_query = "SELECT user_id FROM user where user_id = ?";
 
     try {
-        let id_vali = true
-        const [rows] = await conn.query(sql_query)
-        for(var i=0; i<rows.length; i++){
-            if(rows[i].user_id == body.user_id){
-                id_vali = false
-            }
-        }
+        const [rows] = await conn.query(sql_query, body.user_id)
 
-        if(id_vali){
+        if(rows.length == 0){
             res.json({
                 status: 200,
                 message: "사용할 수 있는 ID입니다."
@@ -42,18 +36,12 @@ export const IDValidation = async (req, res) => {
 export const EmailUpValidation = async (req, res) => {
     const conn = maria_conn()
     const body = req.body
-    const sql_query = "SELECT user_email FROM user"
+    const sql_query = "SELECT user_email FROM user where user_email = ?";
 
     try {
-        let email_vali = true
-        const [rows] = await conn.query(sql_query)
-        for(var i=0; i<rows.length; i++){
-            if(rows[i].user_email == body.user_email){
-                email_vali = false
-            }
-        }
+        const [rows] = await conn.query(sql_query, body.user_email)
 
-        if(email_vali){
+        if(rows.length == 0){
             res.json({
                 status: 200,
                 message: "사용할 수 있는 E-mail 입니다."
