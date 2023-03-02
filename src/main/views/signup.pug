@@ -6,30 +6,30 @@ block content
     .nav_margin
         .content
             .vertical.content
-                form(class = "vertical content" action="/signup" name = "signup_form" method="POST")
-                    .vertical.content
-                        input(class = "input_form" placeholder = "아이디" id = "id_input" required)
-                        .status_msg_box.vertical.flex_box
-                            span(class = "err" id = "id_err")
-                    .vertical.content
-                        input(type = "password" class = "input_form" placeholder = "비밀번호" id = "pw_input" required)
-                        .status_msg_box.vertical.flex_box
-                            span(class = "err" id = "pw_err")
-                    .vertical.content
-                        input(type = "password" class = "input_form" placeholder = "비밀번호 확인" id = "pw2_input" required)
-                        .status_msg_box.vertical.flex_box
-                            span(class = "err" id = "pw2_err")
-                    .vertical.content
-                        input(class = "input_form" placeholder = "이름" required)
-                        .status_msg_box.vertical.flex_box
-                            span(class = "err" id = "name_err")
-                    .vertical.content
-                        input(class = "input_form" placeholder = "이메일" required)
-                        .status_msg_box.vertical.flex_box
-                            span(class = "err" id = "email_err")
-                    button(type = "button" onclick = "" class = "submit") 가입하기
+                .vertical.content
+                    input(class = "input_form" placeholder = "아이디" id = "id_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "id_err")
+                .vertical.content
+                    input(type = "password" class = "input_form" placeholder = "비밀번호" id = "pw_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "pw_err")
+                .vertical.content
+                    input(type = "password" class = "input_form" placeholder = "비밀번호 확인" id = "pw2_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "pw2_err")
+                .vertical.content
+                    input(class = "input_form" placeholder = "이름" id = "name_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "name_err")
+                .vertical.content
+                    input(class = "input_form" placeholder = "이메일" id = "email_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "email_err")
+                button(type = "button" id = "btn_signup" onclick = "submit_signup()" class = "submit") 가입하기
 
     script(src = "/js/signup.js")
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
 
 
 
