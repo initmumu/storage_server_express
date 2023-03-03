@@ -57,6 +57,10 @@ class Server {
             console.log(chalk`{yellow.bold └───────────────────────────────────────┘}`)
         })
     }
+
+    Login(){
+        
+    }
 }
 
 export function serverBoot(){

@@ -2,16 +2,16 @@ import { maria_conn } from "../../../../conn/maria_conn"
 
 export const signUpPage = (req, res) => {
     res.render("signup")
-    console.log('page test')
+    console.log('signup page test')
 }
 
 export const IDValidation = async (req, res) => {
     const conn = maria_conn()
-    const body = req.body
+    let user_id = req.query.user_id;
     const sql_query = "SELECT user_id FROM user where user_id = ?";
 
     try {
-        const [rows] = await conn.query(sql_query, body.user_id)
+        const [rows] = await conn.query(sql_query, user_id)
 
         if(rows.length == 0){
             res.json({
@@ -35,11 +35,11 @@ export const IDValidation = async (req, res) => {
 
 export const EmailUpValidation = async (req, res) => {
     const conn = maria_conn()
-    const body = req.body
+    let user_email = req.query.user_email
     const sql_query = "SELECT user_email FROM user where user_email = ?";
 
     try {
-        const [rows] = await conn.query(sql_query, body.user_email)
+        const [rows] = await conn.query(sql_query, user_email)
 
         if(rows.length == 0){
             res.json({
@@ -65,7 +65,7 @@ export const requestSignUp = async (req, res) => {
 
     const conn = maria_conn()
     const body = req.body
-    const sql_query = "INSERT INTO user (user_id, user_pw, user_name, user_email) VALUES (?, ?, ?, ?)"
+    const sql_query = "INSERT INTO user (user_id, user_pw, user_name, user_email) VALUES (?, sha2(?,256), ?, ?)"
     try {
         const values = [body.user_id, body.user_pw, body.user_name, body.user_email]
 

@@ -5,7 +5,7 @@ const router = Router()
 
 router.get("/", signUpPage)
 router.post("/", requestSignUp)
-router.post("/idcheck", IDValidation)
-router.post("/emailcheck", EmailUpValidation)
+router.get("/idcheck", IDValidation)
+router.get("/emailcheck", EmailUpValidation)
 
 export default router
