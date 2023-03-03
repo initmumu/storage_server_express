@@ -1,0 +1,17 @@
+extends \layout\layout.pug
+
+block content 
+    head
+        link(rel="stylesheet", href="/css/form.css")
+    .nav_margin
+        .content
+            .vertical.content
+                .vertical.content
+                    input(class = "input_form" placeholder = "아이디" id = "id_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "id_err")
+                .vertical.content
+                    input(type = "password" class = "input_form" placeholder = "비밀번호" id = "pw_input" required)
+                    .status_msg_box.vertical.flex_box
+                        span(class = "err" id = "pw_err")
+                button(type = "button" id = "btn_signup" onclick = "submit_signup()" class = "submit") 로그인
