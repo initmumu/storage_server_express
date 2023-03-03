@@ -10,6 +10,7 @@ import chalk from "chalk"; //? 콘솔에 찍히는 글자를 이쁘게
 //? Controller
 import mainController from "./controllers/main.controller";
 import signupController from "./controllers/signup/signup.controller";
+import loginController from "./controllers/login/login.controller";
 
 class Server {
   constructor(_PORT) {
@@ -20,6 +21,7 @@ class Server {
   setRoute() {
     this.app.use("/", mainController);
     this.app.use("/signup", signupController);
+    this.app.use("/login", loginController);
   }
 
   setMiddleware() {
